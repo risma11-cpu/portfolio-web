@@ -101,3 +101,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+// --- ANIMASI PROJECT (ZIG-ZAG / KIRI KANAN) ---
+const projects = document.querySelectorAll('.project-card');
+
+const projectObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Nambahin class 'show' buat animasi
+            entry.target.classList.add('show');
+            
+            // Stop observing biar gak ulang animasi
+            projectObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.2 // Animasi jalan pas 20% kartunya keliatan
+});
+
+// Pasang observer ke semua kartu
+projects.forEach((project) => {
+    projectObserver.observe(project);
+});
