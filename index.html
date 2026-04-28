@@ -148,10 +148,10 @@
                     <p><i class="fa-solid fa-location-dot"></i> Indonesia</p>
                     <p><i class="fa-solid fa-briefcase"></i> Available Now</p>
                 </div>
-                <div class="btnn">
-                    <button class="btn-home1"><i class="fa-solid fa-arrow-right"></i> Hire Me</button>
-                    <button class="btn-home2"><i class="fa-solid fa-download"></i> Download CV</button>
-                </div>
+            <div class="btnn">
+    <button class="btn-home1" id="btnHireMe"><i class="fa-solid fa-arrow-right"></i> Hire Me</button>
+    <a href="rismaturrahmy_cv.pdf" download class="btn-home2"><i class="fa-solid fa-download"></i> Download CV</a>
+</div>
                 <div class="hhr">
                     <hr>
                 </div>
@@ -197,7 +197,73 @@
             </div>
         </div>
     </section>
+<!-- HIRE ME MODAL -->
+<div class="hire-overlay" id="hireModal">
+    <div class="hire-content">
+        <button class="hire-close" id="hireClose"><i class="fa-solid fa-xmark"></i></button>
 
+        <div class="hire-top">
+            <img src="images/fotocima1.jpeg" alt="Rismatur Rahmi">
+            <div class="hire-intro">
+                <h2>Rismatur Rahmi</h2>
+                <p class="hire-role">Frontend Developer</p>
+                <span class="hire-status"><i class="fa-solid fa-circle" style="font-size:8px;"></i> Available Now</span>
+            </div>
+        </div>
+
+        <div class="hire-body">
+            <div class="hire-block">
+    <h4><i class="fa-solid fa-user"></i> Tentang Saya</h4>
+    <p>Saya adalah seorang mahasiswa di Universitas Jabal Ghafur yang sedang fokus mengembangkan diri di bidang Frontend Web Development.</p>
+    <p style="margin-top:8px;">Saya menyukai proses merancang dan membangun tampilan website, apalagi ketika bisa membuat desain yang cantik dan menarik. Bagi saya, frontend bukan hanya soal coding, tapi juga tentang bagaimana menciptakan pengalaman visual yang nyaman dan menyenangkan.</p>
+    <p style="margin-top:8px;">Di luar itu, saya suka mengeksplorasi alam, seperti mendaki gunung. Bagi saya, kegiatan tersebut memberikan ketenangan sekaligus tantangan yang menyenangkan.</p>
+    <p style="margin-top:8px;">Ke depannya, saya ingin menjalani hidup dengan lebih bebas, mengeksplorasi banyak hal baru, dan perlahan mewujudkan berbagai keinginan pribadi yang selama ini hanya tersimpan sebagai wishlist.</p>
+</div>
+
+            <div class="hire-block">
+                <h4><i class="fa-solid fa-graduation-cap"></i> Pendidikan</h4>
+                <div class="hire-edu-item">
+                    <strong>Universitas Jabal Ghafur</strong>
+                    <p>Teknik Informatika — Sekarang</p>
+                </div>
+                <div class="hire-edu-item">
+                    <strong>SMA Negeri 1 Bandar Baru</strong>
+                </div>
+                <div class="hire-edu-item">
+                    <strong>SMP Negeri 5 Bandar Baru</strong>
+                </div>
+                <div class="hire-edu-item">
+                    <strong>SD Negeri Pusong</strong>
+                </div>
+            </div>
+
+            <div class="hire-block">
+                <h4><i class="fa-solid fa-heart"></i> Hobi</h4>
+                <div class="hire-skills">
+                    <span>Eksplor Alam</span>
+                    <span>Naik Gunung</span>
+                    <span>Desain Website</span>
+                    <span>Coding</span>
+                </div>
+            </div>
+
+            <div class="hire-block">
+                <h4><i class="fa-solid fa-location-dot"></i> Lokasi & Kontak</h4>
+                <p><i class="fa-solid fa-map-pin"></i> Aceh, Indonesia</p>
+                <div class="hire-socials">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hire-footer">
+            <p>Thanks for scrolling this far, hope you like what you see 🤎</p>
+        </div>
+    </div>
+</div>
    <!-- CERTIFICATE SECTION -->
 <section class="project reveal" id="certificate">
     <p>CERTIFICATES</p>
@@ -386,8 +452,9 @@
 </a>
         </div>
     </div>
-    </section>
 
+        </div>
+    </section>
      <!-- Services Section -->
         <section id="service" class="section services reveal">
             <p>SERVICES</p>
