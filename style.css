@@ -1178,3 +1178,290 @@ hr {
     height: auto;
     object-fit: contain;
 }
+/* ===== HIRE ME MODAL ===== */
+.hire-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.hire-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hire-content {
+    background: rgba(120, 10, 25, 0.35);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 80, 110, 0.25);
+    border-radius: 20px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.9) translateY(20px);
+    transition: 0.3s ease;
+    box-shadow: 0 15px 40px rgba(255, 0, 80, 0.2);
+}
+
+.hire-overlay.show .hire-content {
+    transform: scale(1) translateY(0);
+}
+
+/* Scrollbar modal */
+.hire-content::-webkit-scrollbar { width: 5px; }
+.hire-content::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); }
+.hire-content::-webkit-scrollbar-thumb { background: #ff4d6d; border-radius: 10px; }
+
+.hire-close {
+    position: absolute;
+    top: 15px; right: 15px;
+    background: rgba(255, 80, 120, 0.15);
+    border: 1px solid rgba(255, 80, 120, 0.3);
+    color: #ff9db3;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    font-size: 1rem;
+    z-index: 2;
+}
+
+.hire-close:hover {
+    background: #ff4d6d;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 80, 120, 0.5);
+}
+
+/* TOP - Foto + Intro */
+.hire-top {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 30px 30px 20px;
+    border-bottom: 1px solid rgba(255, 80, 110, 0.15);
+}
+
+.hire-top img {
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 80, 120, 0.4);
+    box-shadow: 0 0 20px rgba(255, 80, 120, 0.3);
+}
+
+.hire-intro h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.hire-role {
+    color: #ff9db3;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.hire-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 80, 120, 0.15);
+    color: #4dff88;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* BODY */
+.hire-body {
+    padding: 25px 30px;
+}
+
+.hire-block {
+    margin-bottom: 22px;
+}
+
+.hire-block:last-child {
+    margin-bottom: 0;
+}
+
+.hire-block h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.85rem;
+    color: #ff4d6d;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hire-block p {
+    color: #d0d0d0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Education */
+.hire-edu-item {
+    margin-bottom: 10px;
+    padding-left: 12px;
+    border-left: 2px solid rgba(255, 80, 120, 0.3);
+}
+
+.hire-edu-item:last-child {
+    margin-bottom: 0;
+}
+
+.hire-edu-item strong {
+    display: block;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.hire-edu-item p {
+    color: #ff9db3;
+    font-size: 0.8rem;
+    padding-left: 0;
+}
+
+/* Skills */
+.hire-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.hire-skills span {
+    background: rgba(255, 80, 120, 0.12);
+    border: 1px solid rgba(255, 80, 120, 0.25);
+    color: #ff9db3;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.hire-skills span:hover {
+    background: rgba(255, 80, 120, 0.25);
+    color: #fff;
+}
+
+/* Certificates */
+.hire-certs {
+    list-style: none;
+    padding: 0;
+}
+
+.hire-certs li {
+    color: #d0d0d0;
+    font-size: 0.85rem;
+    padding: 5px 0;
+    padding-left: 18px;
+    position: relative;
+}
+
+.hire-certs li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 12px;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #ff4d6d;
+}
+
+/* Socials */
+.hire-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.hire-socials a {
+    color: #ff9db3;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.hire-socials a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #ff4d6d;
+}
+
+/* Footer */
+.hire-footer {
+    padding: 18px 30px;
+    border-top: 1px solid rgba(255, 80, 120, 0.15);
+    text-align: center;
+}
+
+.hire-footer p {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.8rem;
+}
+
+/* Download CV button (jadi <a>) */
+.btn-home2 {
+    background: transparent;
+    border: 2px solid #ff4d6d;
+    border-radius: 12px;
+    padding: 12px 18px;
+    color: #ff4d6d;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-home2:hover {
+    background: #ff4d6d;
+    color: #fff;
+}
+
+/* ===== RESPONSIVE HIRE MODAL ===== */
+@media (max-width: 600px) {
+    .hire-top {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px 18px;
+    }
+
+    .hire-top img {
+        width: 90px; height: 90px;
+    }
+
+    .hire-body {
+        padding: 20px;
+    }
+
+    .hire-footer {
+        padding: 15px 20px;
+    }
+}
