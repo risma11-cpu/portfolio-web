@@ -122,3 +122,30 @@ const projectObserver = new IntersectionObserver((entries) => {
 projects.forEach((project) => {
     projectObserver.observe(project);
 });
+// ===== HIRE ME MODAL =====
+const hireModal = document.getElementById("hireModal");
+const btnHireMe = document.getElementById("btnHireMe");
+const hireClose = document.getElementById("hireClose");
+
+if (btnHireMe) {
+    btnHireMe.addEventListener("click", () => {
+        hireModal.classList.add("show");
+        document.body.style.overflow = "hidden";
+    });
+}
+
+if (hireClose) {
+    hireClose.addEventListener("click", () => {
+        hireModal.classList.remove("show");
+        document.body.style.overflow = "";
+    });
+}
+
+if (hireModal) {
+    hireModal.addEventListener("click", (e) => {
+        if (e.target === hireModal) {
+            hireModal.classList.remove("show");
+            document.body.style.overflow = "";
+        }
+    });
+}
