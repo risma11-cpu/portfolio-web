@@ -1502,3 +1502,20 @@ hr {
         align-items: center;
     }
 }
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+@media (max-width: 1400px) {
+    .home {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    .home img {
+        width: 300px;
+    }
+    .home-container {
+        gap: 3rem;
+    }
+}
