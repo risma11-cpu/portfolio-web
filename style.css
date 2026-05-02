@@ -1671,12 +1671,7 @@ hr {
     box-shadow: 0 0 15px rgba(255, 0, 80, 0.2);
 }
 
-.hamburger:hover {
-    background: rgba(255, 80, 120, 0.25);
-    box-shadow: 0 0 20px rgba(255, 80, 120, 0.4);
-}
-
-/* ===== MOBILE NAV ===== */
+/* ===== HAMBURGER MOBILE ===== */
 @media (max-width: 768px) {
 
     .hamburger {
@@ -1684,31 +1679,33 @@ hr {
     }
 
     .div-list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 16px;
         position: relative;
     }
 
     .ul-list {
-        display: none;
+        display: none !important;
         flex-direction: column;
         position: absolute;
         top: 60px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        max-width: 320px;
+        right: 16px;
+        width: 85%;
+        max-width: 300px;
         padding: 16px;
-        gap: 6px;
+        gap: 4px;
         border-radius: 18px;
-        background: rgba(12, 6, 10, 0.95);
+        background: rgba(12, 6, 10, 0.97);
         backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 80, 110, 0.3);
-        box-shadow: 0 15px 40px rgba(255, 0, 80, 0.3);
+        box-shadow: 0 15px 40px rgba(255, 0, 80, 0.35);
         z-index: 999;
     }
 
-    /* KETIKA MENU DIBUKA */
     .ul-list.show {
-        display: flex;
+        display: flex !important;
     }
 
     .ul-list li {
@@ -1722,12 +1719,11 @@ hr {
         font-size: 14px;
     }
 
-    /* ANIMASI MASUK */
+    /* animasi masuk */
     .ul-list.show li {
         animation: slideDown 0.3s ease forwards;
         opacity: 0;
     }
-
     .ul-list.show li:nth-child(1) { animation-delay: 0.05s; }
     .ul-list.show li:nth-child(2) { animation-delay: 0.1s; }
     .ul-list.show li:nth-child(3) { animation-delay: 0.15s; }
@@ -1736,13 +1732,7 @@ hr {
     .ul-list.show li:nth-child(6) { animation-delay: 0.3s; }
 
     @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 }
