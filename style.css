@@ -1465,3 +1465,194 @@ hr {
         padding: 15px 20px;
     }
 }
+/* ===== RESPONSIVE HP & TABLET ===== */
+
+@media (max-width: 768px) {
+
+    /* --- INTRO CARD --- */
+    .content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .left h1 {
+        font-size: 32px;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .top-tags {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+    }
+
+    .orbit-box {
+        width: 180px;
+        height: 180px;
+    }
+
+    .core {
+        inset: 40px;
+    }
+
+    .core span {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    /* --- NAVIGASI --- */
+    .div-list {
+        padding: 10px 0;
+    }
+
+    .ul-list {
+        gap: 0.4rem;
+        padding: 8px 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ul-list li {
+        padding: 6px 10px;
+    }
+
+    .ul-list li a {
+        font-size: 12px;
+    }
+
+    /* --- SECTION MARGIN --- */
+    .home,
+    .project,
+    .about,
+    .services {
+        margin: 100px 20px;
+    }
+
+    /* --- HOME --- */
+    .home-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .home img {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .info-home h1 {
+        font-size: 36px;
+    }
+
+    .info-home h3 {
+        font-size: 24px;
+    }
+
+    .info-p2 {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .btnn {
+        flex-direction: column;
+    }
+
+    /* --- PROJECT GRID --- */
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card .btns {
+        flex-direction: column;
+    }
+
+    /* --- ABOUT --- */
+    .about-info2 {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .photo-container img {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    /* --- SERVICES --- */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- CONTACT --- */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .contact-item {
+        justify-content: flex-start;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+    }
+
+    .contact-form {
+        padding: 24px;
+    }
+}
+
+/* ===== HP KECIL (< 480px) ===== */
+@media (max-width: 480px) {
+
+    .left h1 {
+        font-size: 26px;
+    }
+
+    .orbit-box {
+        width: 150px;
+        height: 150px;
+    }
+
+    .core {
+        inset: 30px;
+    }
+
+    .core span {
+        font-size: 8px;
+    }
+
+    .info-home h1 {
+        font-size: 28px;
+    }
+
+    .info-home h3 {
+        font-size: 20px;
+    }
+
+    .home,
+    .project,
+    .about,
+    .services {
+        margin: 80px 16px;
+    }
+
+    .home-p {
+        font-size: 12px;
+    }
+
+    .about h3 {
+        font-size: 22px;
+    }
+
+    .project h1,
+    .services h1 {
+        font-size: 20px;
+    }
+}
