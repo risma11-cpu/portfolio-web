@@ -155,8 +155,6 @@ const navMenu = document.getElementById('navMenu');
 
 mobBtn.addEventListener('click', () => {
     navMenu.classList.toggle('show');
-    
-    // Ganti icon bars ↔ xmark
     const icon = mobBtn.querySelector('i');
     if (navMenu.classList.contains('show')) {
         icon.classList.remove('fa-bars');
@@ -167,13 +165,30 @@ mobBtn.addEventListener('click', () => {
     }
 });
 
-// TUTUP MENU KETIKA KLIK LINK
+// SMOOTH SCROLL + TUTUP MENU
 navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // Tutup menu
         navMenu.classList.remove('show');
         const icon = mobBtn.querySelector('i');
         icon.classList.remove('fa-xmark');
         icon.classList.add('fa-bars');
+
+        // Ambil target section
+        const targetId = link.getAttribute('href');
+        const target = document.querySelector(targetId);
+
+        if (target) {
+            // Delay dikit biar menu tertutup dulu
+            setTimeout(() => {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 150);
+        }
     });
 });
 
