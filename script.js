@@ -149,3 +149,40 @@ if (hireModal) {
         }
     });
 }
+// HAMBURGER MENU
+const mobBtn = document.getElementById('mobBtn');
+const navMenu = document.getElementById('navMenu');
+
+mobBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+    
+    // Ganti icon bars ↔ xmark
+    const icon = mobBtn.querySelector('i');
+    if (navMenu.classList.contains('show')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+    } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+    }
+});
+
+// TUTUP MENU KETIKA KLIK LINK
+navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+        const icon = mobBtn.querySelector('i');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+    });
+});
+
+// TUTUP MENU KETIKA KLIK DI LUAR
+document.addEventListener('click', (e) => {
+    if (!mobBtn.contains(e.target) && !navMenu.contains(e.target)) {
+        navMenu.classList.remove('show');
+        const icon = mobBtn.querySelector('i');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+    }
+});
