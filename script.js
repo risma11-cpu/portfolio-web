@@ -1,5 +1,24 @@
 window.addEventListener("load", () => {
 
+    const intro = document.getElementById("intro");
+    const site = document.getElementById("real-site");
+
+    // ===== SKIP INTRO KALAU ADA HASH DI URL (misal balik dari sertifikat.html) =====
+    if (window.location.hash) {
+        intro.style.display = "none";
+        site.style.display = "block";
+        initScrollAnimations();
+
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop - 120,
+                behavior: "auto"
+            });
+        }
+        return;
+    }
+
     const animations = [
         { selector: ".top-tags", class: "from-top", delay: 0 },
         { selector: ".left h1", class: "from-left", delay: 0.3 },
@@ -21,9 +40,6 @@ window.addEventListener("load", () => {
 
     // ===== HIDE INTRO =====
     setTimeout(() => {
-        const intro = document.getElementById("intro");
-        const site = document.getElementById("real-site");
-
         intro.classList.add("smooth-out");
 
         setTimeout(() => {
