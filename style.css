@@ -1873,3 +1873,289 @@ hr {
         border-radius: 22px;
     }
 }
+/* ===== TECH STACK SECTION ===== */
+.stack-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.stack-group-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ff9db3;
+    margin-bottom: 18px;
+    text-align: left;
+    padding-left: 4px;
+}
+
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 100%;
+}
+
+.stack-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 80, 120, 0.25);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    transition: 0.3s ease;
+}
+
+.stack-badge i {
+    font-size: 26px;
+    color: #ff4d6d;
+    transition: 0.3s ease;
+}
+
+.stack-badge span {
+    font-size: 12px;
+    color: #d1d1d1;
+}
+
+.stack-badge:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 80, 120, 0.5);
+    box-shadow: 0 0 25px rgba(255, 80, 120, 0.35);
+}
+
+.stack-badge:hover i {
+    color: #ff9db3;
+    text-shadow: 0 0 12px rgba(255, 80, 120, 0.8);
+}
+
+/* ===== CURRENTLY LEARNING SECTION ===== */
+.learn-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.learn-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 80, 120, 0.25);
+    border-radius: 18px;
+    padding: 24px 18px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    transition: 0.3s ease;
+}
+
+.learn-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(255, 80, 120, 0.35);
+}
+
+.learn-card i {
+    font-size: 22px;
+    color: #ff4d6d;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.learn-card h4 {
+    color: #f2f2f2;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.learn-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(255, 80, 120, 0.15);
+    border: 1px solid rgba(255, 80, 120, 0.35);
+    color: #ff9db3;
+}
+
+/* ===== TOOLS I USE SECTION ===== */
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tools-badge {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 80, 120, 0.25);
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    transition: 0.3s ease;
+}
+
+.tools-badge i {
+    font-size: 24px;
+    color: #ff4d6d;
+    transition: 0.3s ease;
+}
+
+.tools-badge:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 80, 120, 0.5);
+    box-shadow: 0 0 20px rgba(255, 80, 120, 0.35);
+}
+
+.tools-badge:hover i {
+    color: #ff9db3;
+}
+
+.tools-badge .tools-tip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    margin-bottom: 8px;
+    padding: 4px 10px;
+    font-size: 11px;
+    white-space: nowrap;
+    background: rgba(12, 6, 10, 0.95);
+    border: 1px solid rgba(255, 80, 120, 0.35);
+    border-radius: 8px;
+    color: #f5c7d3;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
+}
+
+.tools-badge:hover .tools-tip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ===== RESPONSIVE NEW SECTIONS ===== */
+@media (max-width: 768px) {
+    .stack-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .learn-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .tools-badge {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stack-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .learn-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===== PARTNER LOGOS (DICODING & IBM) ===== */
+
+.cert-partners {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 10px 0 40px;
+}
+
+.cert-partners-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #c9c9c9;
+}
+
+.cert-partners-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.cert-partners-logos img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+    border-radius: 50%;
+
+    filter: none;
+opacity: 1;
+
+    transition: 0.3s ease;
+}
+
+.cert-partners-logos img:hover {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+@media (max-width: 480px) {
+
+    .cert-partners-logos {
+        gap: 24px;
+    }
+
+    .cert-partners-logos img {
+        width: 48px;
+        height: 48px;
+    }
+}
+/* ===== FORCE BADGE SAMA UKURAN DENGAN SERTIFIKAT ===== */
+#badges .project-card {
+    padding: 22px !important;
+}
+
+#badges .project-card img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+    object-fit: cover !important;
+    border-radius: 14px !important;
+    margin-bottom: 0 !important;
+    border: 1px solid rgba(255, 80, 120, 0.25) !important;
+}
+#badges {
+    margin: 0 !important;
+    padding-top: 100px;
+}
+#badges .badge-square {
+    padding: 22px !important;
+    overflow: hidden;
+}
+#badges .project-card.badge-square img {
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    transform: scale(1.35);
+    width: 70% !important;
+    margin: 0 auto !important;
+    display: block !important;
+    border-radius: 14px !important;
+}
