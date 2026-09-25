@@ -1740,6 +1740,7 @@ hr {
     display: flex;
     justify-content: center;
     margin-top: 40px;
+     align-items: center;   /* cegah anak <a> stretch penuh tinggi container */
 }
 
 .cert-nav-btn {
@@ -1756,6 +1757,7 @@ hr {
     color: #f5c7d3;
     font-size: 14px;
     transition: 0.3s ease;
+     align-self: center;    /* pastikan tombol tetap sekecil isi kontennya */
 }
 
 .cert-nav-btn i {
@@ -1916,7 +1918,6 @@ hr {
 
 .stack-badge i {
     font-size: 26px;
-    color: #ff4d6d;
     transition: 0.3s ease;
 }
 
@@ -1932,8 +1933,7 @@ hr {
 }
 
 .stack-badge:hover i {
-    color: #ff9db3;
-    text-shadow: 0 0 12px rgba(255, 80, 120, 0.8);
+    filter: drop-shadow(0 0 8px currentColor);
 }
 
 /* ===== CURRENTLY LEARNING SECTION ===== */
@@ -1964,7 +1964,6 @@ hr {
 
 .learn-card i {
     font-size: 22px;
-    color: #ff4d6d;
     margin-bottom: 12px;
     display: block;
 }
@@ -2014,7 +2013,6 @@ hr {
 
 .tools-badge i {
     font-size: 24px;
-    color: #ff4d6d;
     transition: 0.3s ease;
 }
 
@@ -2025,7 +2023,7 @@ hr {
 }
 
 .tools-badge:hover i {
-    color: #ff9db3;
+    filter: drop-shadow(0 0 8px currentColor);
 }
 
 .tools-badge .tools-tip {
@@ -2050,6 +2048,25 @@ hr {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
+
+/* ===== BRAND COLORS (FA brand icons) ===== */
+.fa-html5 { color: #E34F26; }
+.fa-css3-alt { color: #1572B6; }
+.fa-js { color: #F7DF1E; }
+.fa-react { color: #61DAFB; }
+.fa-bolt { color: #646CFF; }
+.fa-git-alt { color: #F05032; }
+.fa-github { color: #ffffff; }
+.fa-figma { color: #F24E1E; }
+.fa-palette { color: #00C4CC; }
+.fa-google { color: #4285F4; }
+.fa-python { color: #3776AB; }
+.fa-code { color: #007ACC; }
+.fa-caret-up { color: #000000; }
+.fa-server { color: #FB7A24; }
+.learn-card .fa-brain { color: #A855F7 !important; }
+.fa-eye { color: #00BFA6; }
+.fa-pen-ruler { color: #FFB84C; }
 
 /* ===== RESPONSIVE NEW SECTIONS ===== */
 @media (max-width: 768px) {
