@@ -1740,7 +1740,11 @@ hr {
     display: flex;
     justify-content: center;
     margin-top: 40px;
-     align-items: center;   /* cegah anak <a> stretch penuh tinggi container */
+    align-items: center;
+}
+
+section + .cert-more-wrap {
+    margin-top: 16px;
 }
 
 .cert-nav-btn {
