@@ -2049,24 +2049,54 @@ hr {
     transform: translateX(-50%) translateY(0);
 }
 
-/* ===== BRAND COLORS (FA brand icons) ===== */
-.fa-html5 { color: #E34F26; }
-.fa-css3-alt { color: #1572B6; }
-.fa-js { color: #F7DF1E; }
-.fa-react { color: #61DAFB; }
-.fa-bolt { color: #646CFF; }
-.fa-git-alt { color: #F05032; }
-.fa-github { color: #ffffff; }
-.fa-figma { color: #F24E1E; }
-.fa-palette { color: #00C4CC; }
-.fa-google { color: #4285F4; }
-.fa-python { color: #3776AB; }
-.fa-code { color: #007ACC; }
-.fa-caret-up { color: #000000; }
-.fa-server { color: #FB7A24; }
+/* ===== BRAND COLORS (FA brand icons) — scoped ke tech stack aja ===== */
+.stack-badge .fa-html5,
+.tools-badge .fa-html5 { color: #E34F26; }
+
+.stack-badge .fa-css3-alt,
+.tools-badge .fa-css3-alt { color: #1572B6; }
+
+.stack-badge .fa-js,
+.tools-badge .fa-js,
+.learn-card .fa-js { color: #F7DF1E; }
+
+.stack-badge .fa-react,
+.tools-badge .fa-react,
+.learn-card .fa-react { color: #61DAFB; }
+
+.stack-badge .fa-bolt,
+.tools-badge .fa-bolt { color: #646CFF; }
+
+.stack-badge .fa-git-alt,
+.tools-badge .fa-git-alt { color: #F05032; }
+
+.stack-badge .fa-github,
+.tools-badge .fa-github { color: #ffffff; }
+
+.stack-badge .fa-figma,
+.tools-badge .fa-figma { color: #F24E1E; }
+
+.stack-badge .fa-palette,
+.tools-badge .fa-palette { color: #00C4CC; }
+
+.stack-badge .fa-google,
+.tools-badge .fa-google { color: #4285F4; }
+
+.stack-badge .fa-python,
+.tools-badge .fa-python { color: #3776AB; }
+
+.stack-badge .fa-code,
+.tools-badge .fa-code { color: #007ACC; }
+
+.stack-badge .fa-caret-up,
+.tools-badge .fa-caret-up { color: #000000; }
+
+.stack-badge .fa-server,
+.tools-badge .fa-server { color: #FB7A24; }
+
 .learn-card .fa-brain { color: #A855F7 !important; }
-.fa-eye { color: #00BFA6; }
-.fa-pen-ruler { color: #FFB84C; }
+.learn-card .fa-eye { color: #00BFA6; }
+.learn-card .fa-pen-ruler { color: #FFB84C; }
 
 /* ===== RESPONSIVE NEW SECTIONS ===== */
 @media (max-width: 768px) {
